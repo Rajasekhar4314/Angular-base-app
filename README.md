@@ -2,6 +2,24 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.13.
 
+## Install Nodejs
+
+## Install Specific angular cli
+
+## Create a new Angular app
+
+ng new
+
+## start server
+
+npm run or ng serve
+
+## ERROR: ReadableStreamBYOBRequest: typeof globalThis extends { onmessage: any; ReadableStreamBYOBRequest: infer T
+
+- update the Typescript version to 4.8 to resolve if you get the above error
+
+npm i typescript@4.8
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
