@@ -10,6 +10,9 @@ export class ServersComponent implements OnInit {
 
   allowNewServer = false;
   serverCreationStatus = "No server was created"
+  serverName: String = 'Gcp mc'
+  username: String = '';
+
   constructor() { 
     setTimeout(() => {
       this.allowNewServer = true;
@@ -23,6 +26,14 @@ export class ServersComponent implements OnInit {
     this.serverCreationStatus = "Server is created"
   }
 
+  onUpdateServerName(event : any){
+    // console.log("ent :", event)
+    this.serverName = event.target.value;
+  }
 
-
+  //  Assignment
+  resetUserName(){
+    console.log("i am inside")
+    this.username = ''
+  }
 }
