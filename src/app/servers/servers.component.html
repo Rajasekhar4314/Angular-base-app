@@ -37,3 +37,25 @@
 <p>{{username}}</p>
 
 <hr>
+
+<h3>Ng If</h3>
+
+<label>Create Account</label> <br>
+
+<input type="text" class="form-control" [(ngModel)]="accountName">
+
+<button class="btn btn-primary" [disabled]="!accountName" (click)="createAccount()">Create</button>
+
+<p *ngIf="accountCreated; else noAccount">Account was created, Account name is {{accountName}}</p>
+<ng-template #noAccount>
+    <p>No account is created</p>
+</ng-template>
+
+<hr>
+
+<h3>Ng Style</h3>
+
+<label>Account Status</label> <br>
+
+<p [ngStyle]="{ backgroundColor: getColor() }"> Account status is {{accountStatus}} (or) {{ getAccountStatus() }}</p>
+
