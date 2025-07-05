@@ -15,7 +15,7 @@ export class ServersComponent implements OnInit {
   accountCreated: boolean = false;
   accountName: String = ''
   accountStatus: String = ''
-
+  servers : any = ['server1', 'server 2']
 
   constructor() { 
     setTimeout(() => {
@@ -54,6 +54,22 @@ export class ServersComponent implements OnInit {
 
   getColor(){
     return this.accountStatus === "online" ? "green" : "red";
+  }
+
+  createServers(){
+    this.servers.push(this.accountName)
+  }
+
+  // +++++++++++++++++++++++
+
+  logs :  any = []
+  details : any = 0;
+  showSecret : boolean = false;
+
+  displayDetails(){
+    // this.details++
+    // this.logs.push(this.logs.length + 1)
+    this.logs.push(new Date());
   }
 
 }
